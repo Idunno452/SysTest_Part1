@@ -8,6 +8,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "install dependencies"
+          command: pip install pytest pytest-cov
+      - run:
           name: "run tests"
           command: python -m pytest -v --cov
 
