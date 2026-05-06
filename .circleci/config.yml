@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: "run tests"
-          command: python -m tests -v --cov
+          command: python -m pytest -v --cov
 
 workflows:
   version: 2
