@@ -8,12 +8,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies
-          command: |
-            pip install pytest
+          name: "install dependencies"
+          command: pip install pytest pytest-cov
       - run:
-          name: Run tests
-          command: python -m pytest
+          name: "run tests"
+          command: python -m pytest -v --cov
 
 workflows:
   version: 2
